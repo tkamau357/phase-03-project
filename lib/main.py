@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Date, Boolean
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 
@@ -194,12 +194,5 @@ while True:
         break
     else:
         print('Invalid choice!')
-
-    # overdue_transactions = session.query(Transaction).filter(Transaction.overdue()).all()
-    # for transaction in overdue_transactions:
-    #     if not transaction.overdue:
-    #         overdue = Overdue()
-    #         overdue.transaction = transaction
-    #         session.add(overdue)
 
 session.close()
